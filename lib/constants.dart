@@ -41,7 +41,7 @@ TextStyle customTextStyle({
 const headline1 = TextStyle(
   color: earieBlack,
   fontSize: 30,
-  fontWeight: FontWeight.w600,
+  fontWeight: FontWeight.w700,
 );
 
 const headline2 = TextStyle(
