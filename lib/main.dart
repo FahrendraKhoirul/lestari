@@ -7,7 +7,8 @@ import 'app/routes/app_pages.dart';
 void main() {
   runApp(
     GetMaterialApp(
-      title: "Application romi",
+      debugShowCheckedModeBanner: false,
+      title: "Lestari 2023",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
     ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lestari/constants.dart';
-import 'package:lestari/views/widgets/custom_buttons.dart';
-import 'package:lestari/views/widgets/landing_widgets.dart';
+
+import '../../app/global_widgets/custom_buttons.dart';
+import '../../app/global_widgets/landing_widgets.dart';
+
 
 class Landing extends StatelessWidget {
   const Landing({super.key});
@@ -45,7 +47,7 @@ class Landing extends StatelessWidget {
                 "Informasi lokasi tempat pembuangan sampah dan fasilitas pengolahan sampah lainnya"),
             landingListItem("assets/images/illus_agenda.png", "Agenda",
                 "Melacak jadwal kegiatan atau acara terkait pengelolaan sampah"),
-            Spacer(),
+            const Spacer(),
             Align(
               alignment: Alignment.bottomRight,
               child: Image.asset(

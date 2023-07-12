@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lestari/constants.dart';
-import 'package:lestari/views/widgets/card_button_grid.dart';
-import 'package:lestari/views/widgets/card_home.dart';
+import '../../app/global_widgets/card_button_grid.dart';
+import '../../app/global_widgets/card_home.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
