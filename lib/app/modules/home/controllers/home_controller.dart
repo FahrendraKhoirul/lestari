@@ -1,11 +1,13 @@
 import 'package:get/get.dart';
+import 'package:lestari/app/modules/home/views/agenda_view.dart';
+import 'package:lestari/app/modules/home/views/homepage_view.dart';
+import 'package:lestari/app/modules/home/views/location_view.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  final activeViewIndex = 0.obs;
 
-  final count = 0.obs;
-
-  final activeIndex = 0.obs;
+  final listView =
+      [const HomePageView(), const LocationView(), const AgendaView()].obs;
 
   @override
   void onInit() {
@@ -22,5 +24,5 @@ class HomeController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  // void increment() => count.value++;
 }
