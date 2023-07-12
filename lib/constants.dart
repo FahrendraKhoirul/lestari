@@ -40,31 +40,31 @@ TextStyle customTextStyle({
 // Text Style
 const headline1 = TextStyle(
   color: earieBlack,
-  fontSize: 28,
+  fontSize: 30,
   fontWeight: FontWeight.w600,
 );
 
 const headline2 = TextStyle(
   color: earieBlack,
-  fontSize: 18,
+  fontSize: 20,
   fontWeight: FontWeight.w600,
 );
 
 const title = TextStyle(
   color: earieBlack,
-  fontSize: 14,
+  fontSize: 16,
   fontWeight: FontWeight.w600,
 );
 
 const paragraph = TextStyle(
   color: earieBlack,
-  fontSize: 12,
+  fontSize: 14,
   fontWeight: FontWeight.w400,
 );
 
 const buttonTextStyle = TextStyle(
   color: white,
-  fontSize: 12,
+  fontSize: 14,
   fontWeight: FontWeight.w600,
 );
 
@@ -130,4 +130,3 @@ var appBarShadow = [
       spreadRadius: 0,
       offset: const Offset(0, 1)),
 ];
-

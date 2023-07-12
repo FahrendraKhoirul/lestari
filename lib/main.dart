@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'views/screens/home.dart';
 import 'views/screens/splash.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Splash(),
+      home: const Home(),
       theme: ThemeData(
         fontFamily: "Rubik",
       ),
