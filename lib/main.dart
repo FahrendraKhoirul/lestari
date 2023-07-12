@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
-import 'views/screens/home.dart';
-import 'views/screens/splash.dart';
+
+import 'package:get/get.dart';
+
+import 'app/routes/app_pages.dart';
 
 void main() {
-  runApp(const MainApp());
-}
-
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const Landing(),
-      theme: ThemeData(
-        fontFamily: "Rubik",
-      ),
-    );
-  }
+  runApp(
+    GetMaterialApp(
+      title: "Application",
+      initialRoute: AppPages.INITIAL,
+      getPages: AppPages.routes,
+    ),
+  );
 }
