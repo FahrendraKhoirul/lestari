@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'views/screens/home.dart';
-import 'views/screens/splash.dart';
 
 void main() {
   runApp(const MainApp());
