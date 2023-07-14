@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lestari/constants.dart';
 
-SizedBox searchField(double screenWidth, String hint, void Function(String value) doSomething) {
+SizedBox searchField(
+    double screenWidth, String hint, void Function(String value) doSomething) {
   return SizedBox(
       width: screenWidth * 1,
       child: TextFormField(
@@ -18,7 +19,11 @@ SizedBox searchField(double screenWidth, String hint, void Function(String value
               borderSide: const BorderSide(color: extraLightGrey, width: 3)),
           contentPadding: const EdgeInsets.symmetric(vertical: paddingSmall),
           hintText: hint,
-          hintStyle: paragraph,
+          hintStyle: customTextStyle(
+            color: lightBlack,
+            weight: FontWeight.w400,
+            size: 14,
+          ),
           prefixIcon: const Padding(
             padding: EdgeInsets.only(left: 30, right: 10),
             child: Icon(
