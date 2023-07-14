@@ -23,7 +23,7 @@ Widget buttonSmall(String text, Function() fun) {
   return ElevatedButton(
     onPressed: fun,
     style: ElevatedButton.styleFrom(
-        fixedSize: const Size(double.infinity, 50),
+        padding: const EdgeInsets.all(paddingXXSmall),
         backgroundColor: darkGreen,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(roundedSize))),
