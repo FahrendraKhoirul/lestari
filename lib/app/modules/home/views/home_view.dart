@@ -9,6 +9,7 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() => Scaffold(
+          backgroundColor: white,
           body: controller.listView[controller.activeViewIndex.value],
           //create bottom nav bar with 3 items
           bottomNavigationBar: BottomNavigationBar(
@@ -16,7 +17,6 @@ class HomeView extends GetView<HomeController> {
             currentIndex: controller.activeViewIndex.value,
             onTap: (index) {
               controller.activeViewIndex.value = index;
-              print(controller.activeViewIndex.value);
             },
             showUnselectedLabels: false,
             fixedColor: darkGreen,
