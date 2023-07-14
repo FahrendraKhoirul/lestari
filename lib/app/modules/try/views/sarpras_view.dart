@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lestari/app/global_widgets/app_bar.dart';
 import 'package:lestari/app/global_widgets/card_sarpras.dart';
 import 'package:lestari/constants.dart';
 
-class SarprasView extends StatelessWidget {
+class SarprasView extends GetView {
   const SarprasView({super.key});
 
   @override

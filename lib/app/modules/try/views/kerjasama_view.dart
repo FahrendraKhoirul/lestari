@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lestari/app/global_widgets/app_bar.dart';
 import 'package:lestari/app/global_widgets/card_kerjasama.dart';
 import 'package:lestari/app/global_widgets/search_field.dart';
 import 'package:lestari/constants.dart';
 
-class KerjasamaView extends StatelessWidget {
+class KerjasamaView extends GetView {
   const KerjasamaView({super.key});
 
   @override

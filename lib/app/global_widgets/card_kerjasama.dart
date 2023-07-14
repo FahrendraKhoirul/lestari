@@ -38,7 +38,7 @@ Container cardKerjasama(String number, date, work, desc) {
         const SizedBox(height: paddingSmall),
         Align(
             alignment: Alignment.bottomRight,
-            child: buttonSmall("Detail", () => {}))
+            child: buttonSmall("Detail", () => {}, paddingXSmall))
       ],
     ),
   );
