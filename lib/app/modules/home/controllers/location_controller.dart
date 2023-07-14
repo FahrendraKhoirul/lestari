@@ -15,7 +15,6 @@ class LocationController extends GetxController {
     "assets/icons/icon_timbunan sampah.png",
   ];
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
