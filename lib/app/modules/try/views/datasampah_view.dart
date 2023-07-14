@@ -16,7 +16,7 @@ class DataSampahView extends GetView<TryController> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            appBar("Data Sampah"),
+            appBar(context, "Data Sampah"),
             Expanded(
               child: Container(
                 decoration: const BoxDecoration(

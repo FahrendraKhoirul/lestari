@@ -14,7 +14,7 @@ Container cardSampah(String title, percent, update, other) {
       children: [
         Text(
           title,
-          style: customTextStyle(size: 14, weight: FontWeight.w600),
+          style: customTextStyle(size: 16, weight: FontWeight.w600),
         ),
         const SizedBox(height: paddingMedium),
         Text(percent,

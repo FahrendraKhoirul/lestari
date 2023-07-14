@@ -12,7 +12,7 @@ class SarprasView extends StatelessWidget {
       backgroundColor: extraDarkGreen,
       body: Column(
         children: [
-          appBar("Sarpras"),
+          appBar(context, "Sarpras"),
           Expanded(
               child: Container(
             decoration: const BoxDecoration(
