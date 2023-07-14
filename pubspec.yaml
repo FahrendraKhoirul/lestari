@@ -8,6 +8,7 @@ environment:
 dependencies: 
   flutter_animate: ^4.2.0
   get: 4.6.5
+  http: 1.1.0
   flutter: 
     sdk: flutter
 
@@ -22,3 +23,4 @@ flutter:
     - assets/icons/
     - assets/fonts/
   uses-material-design: true
+

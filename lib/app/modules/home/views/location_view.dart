@@ -4,9 +4,10 @@ import 'package:get/get.dart';
 import 'package:lestari/app/global_widgets/card_location.dart';
 import 'package:lestari/app/global_widgets/header.dart';
 import 'package:lestari/app/global_widgets/myscrollbeahaviour.dart';
+import 'package:lestari/app/modules/home/controllers/location_controller.dart';
 import 'package:lestari/constants.dart';
 
-class LocationView extends GetView {
+class LocationView extends GetView<LocationController> {
   const LocationView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -25,27 +26,20 @@ class LocationView extends GetView {
                       imageWidth: 75,
                       subtitle:
                           'Temukan infrastruktur persampahan \ndi Nusa Tenggara Barat'),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(
-                        paddingMedium, 0, paddingMedium, paddingMedium),
-                    child: Column(
-                      children: [
-                        cardLocation("Usaha Persampahan", "145",
-                            "assets/icons/icon_usaha persampahan.png", () {}),
-                        cardLocation(
-                            "Komunitas Peduli Sampah",
-                            "145",
-                            "assets/icons/icon_komunitas peduli sampah.png",
-                            () {}),
-                        cardLocation("Pengelolaan", "145",
-                            "assets/icons/icon_pengelola sampah.png", () {}),
-                        cardLocation("Penampungan Sampah", "145",
-                            "assets/icons/icon_penampungan sampah.png", () {}),
-                        cardLocation("Timbunan Sampah Illegal", "145",
-                            "assets/icons/icon_timbunan sampah.png", () {}),
-                      ],
-                    ),
-                  )
+                  Obx(() => ListView.builder(
+                      padding: const EdgeInsets.all(paddingMedium),
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: controller.locations.length,
+                      itemBuilder: (context, index) {
+                        String titleText =
+                            controller.locations[index].label ?? '';
+                        int subtitleText =
+                            controller.locations[index].count ?? 0;
+                        String images = controller.listImage[index];
+                        return cardLocation(
+                            titleText, subtitleText.toString(), images, () {});
+                      }))
                 ],
               ),
             ),
