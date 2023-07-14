@@ -19,11 +19,11 @@ Widget buttonExpanded(String text, Function() fun) {
   );
 }
 
-Widget buttonSmall(String text, Function() fun) {
+Widget buttonSmall(String text, Function() fun, double padding) {
   return ElevatedButton(
     onPressed: fun,
     style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.all(paddingXXSmall),
+        padding: EdgeInsets.all(padding),
         backgroundColor: darkGreen,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(roundedSize))),

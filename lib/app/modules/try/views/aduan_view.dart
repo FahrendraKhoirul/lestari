@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lestari/app/global_widgets/card_aduan.dart';
 import 'package:lestari/app/global_widgets/search_field.dart';
 import 'package:lestari/constants.dart';
 
-class AduanView extends StatelessWidget {
+class AduanView extends GetView {
   const AduanView({super.key});
 
   @override
