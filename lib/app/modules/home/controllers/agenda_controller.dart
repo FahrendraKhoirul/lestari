@@ -16,18 +16,11 @@ class AgendaController extends GetxController {
   Future<void> onInit() async {
     super.onInit();
     await fetchData();
+    // ignore: invalid_use_of_protected_member
     agendasBySearch.value.addAll(agendas);
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   Future<void> fetchData() async {
     try {
@@ -39,10 +32,9 @@ class AgendaController extends GetxController {
         agendas.value = responseBody
             .map((json) => Agenda.fromJson(json as Map<String, dynamic>))
             .toList();
+        // ignore: invalid_use_of_protected_member
         agendasBySearch.value.addAll(agendas);
       }
-    } catch (e) {
-      print('Error while fetching locations: $e');
     } finally {
       isLoading.value = false;
     }

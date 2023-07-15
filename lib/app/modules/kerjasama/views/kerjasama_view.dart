@@ -16,6 +16,7 @@ class KerjasamaView extends GetView<KerjasamaController> {
     var screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      backgroundColor: white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -35,11 +36,10 @@ class KerjasamaView extends GetView<KerjasamaController> {
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
                         itemBuilder: (context, index) {
-                          String number = controller.kerjasama[index].number ?? '';
-                          String date =
-                              controller.kerjasama[index].date ?? '';
-                          String type =
-                              controller.kerjasama[index].type ?? '';
+                          String number =
+                              controller.kerjasama[index].number ?? '';
+                          String date = controller.kerjasama[index].date ?? '';
+                          String type = controller.kerjasama[index].type ?? '';
                           String desc =
                               controller.kerjasama[index].description ?? '';
 
@@ -48,10 +48,7 @@ class KerjasamaView extends GetView<KerjasamaController> {
                                   child: CircularProgressIndicator(
                                       color: darkGreen))
                               : cardKerjasama(
-                                  number,
-                                  date,
-                                  "Kerjasama $type",
-                                  desc);
+                                  number, date, "Kerjasama $type", desc);
                         },
                       ))
                 ],

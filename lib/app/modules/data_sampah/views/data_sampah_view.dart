@@ -56,8 +56,8 @@ class DataSampahView extends GetView<DataSampahController> {
                       }
                     }),
                     const SizedBox(height: paddingMedium),
-                    cardSampah("Penanganan", "42.20%",
-                        "*update terakhir pada Desember 2022", ""),
+                    // cardSampah("Penanganan", "42.20%",
+                    //     "*update terakhir pada Desember 2022", ""),
                   ],
                 ),
               ),

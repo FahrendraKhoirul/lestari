@@ -9,6 +9,8 @@ abstract class Routes {
   static const SARPRAS = _Paths.SARPRAS;
   static const DATA_SAMPAH = _Paths.DATA_SAMPAH;
   static const KERJASAMA = _Paths.KERJASAMA;
+  static const PANDUAN = _Paths.PANDUAN;
+  static const DETAIL_PANDUAN = _Paths.PANDUAN + _Paths.DETAIL_PANDUAN;
 }
 
 abstract class _Paths {
@@ -18,4 +20,6 @@ abstract class _Paths {
   static const DATA_SAMPAH = '/data-sampah';
   static const SARPRAS = '/sarpras';
   static const KERJASAMA = '/kerjasama';
+  static const PANDUAN = '/panduan';
+  static const DETAIL_PANDUAN = '/detail-panduan';
 }

@@ -58,17 +58,26 @@ class HomePageView extends GetView<HomePageController> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           cardButtonGrid(
-                              Image.asset("assets/icons/icon_panduan.png",
-                                  height: 50),
-                              "Panduan",
-                              "Petunjuk praktis cara mengelola sampah",
-                              width: cardFeatureWidht),
+                            icon: Image.asset("assets/icons/icon_panduan.png",
+                                height: 50),
+                            title: "Panduan",
+                            subtitle: "Petunjuk praktis cara mengelola sampah",
+                            width: cardFeatureWidht,
+                            onTap: () {
+                              Get.toNamed("/panduan");
+                            },
+                          ),
                           cardButtonGrid(
-                              Image.asset("assets/icons/icon_data_sampah.png",
-                                  height: 50),
-                              "Data Sampah",
-                              "Petunjuk praktis cara mengelola sampah",
-                              width: cardFeatureWidht),
+                            icon: Image.asset(
+                                "assets/icons/icon_data_sampah.png",
+                                height: 50),
+                            title: "Data Sampah",
+                            subtitle: "Petunjuk praktis cara mengelola sampah",
+                            width: cardFeatureWidht,
+                            onTap: () {
+                              Get.toNamed("/data-sampah");
+                            },
+                          ),
                         ],
                       ),
                       const SizedBox(height: paddingXSmall),
@@ -76,17 +85,24 @@ class HomePageView extends GetView<HomePageController> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           cardButtonGrid(
-                              Image.asset("assets/icons/icon_aduan.png",
+                              icon: Image.asset("assets/icons/icon_aduan.png",
                                   height: 50),
-                              "Aduan",
-                              "Petunjuk praktis cara mengelola sampah",
-                              width: cardFeatureWidht),
+                              title: "Aduan",
+                              subtitle:
+                                  "Petunjuk praktis cara mengelola sampah",
+                              width: cardFeatureWidht,
+                              onTap: () {}),
                           cardButtonGrid(
-                              Image.asset("assets/icons/icon_kerja_sama.png",
+                              icon: Image.asset(
+                                  "assets/icons/icon_kerja_sama.png",
                                   height: 50),
-                              "Kerjasama",
-                              "Petunjuk praktis cara mengelola sampah",
-                              width: cardFeatureWidht),
+                              title: "Kerjasama",
+                              subtitle:
+                                  "Petunjuk praktis cara mengelola sampah",
+                              width: cardFeatureWidht,
+                              onTap: () {
+                                Get.toNamed("/kerjasama");
+                              }),
                         ],
                       ),
                       const SizedBox(height: paddingXSmall),
@@ -94,17 +110,23 @@ class HomePageView extends GetView<HomePageController> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           cardButtonGrid(
-                              Image.asset("assets/icons/icon_ntb_hijau.png",
-                                  height: 50),
-                              "NTB Hijau",
-                              "Petunjuk praktis cara mengelola sampah",
-                              width: cardFeatureWidht),
+                            icon: Image.asset("assets/icons/icon_ntb_hijau.png",
+                                height: 50),
+                            title: "NTB Hijau",
+                            subtitle: "Petunjuk praktis cara mengelola sampah",
+                            width: cardFeatureWidht,
+                            onTap: () {},
+                          ),
                           cardButtonGrid(
-                              Image.asset("assets/icons/icon_sarpras.png",
-                                  height: 50),
-                              "Sarpras",
-                              "Petunjuk praktis cara mengelola sampah",
-                              width: cardFeatureWidht)
+                            icon: Image.asset("assets/icons/icon_sarpras.png",
+                                height: 50),
+                            title: "Sarpras",
+                            subtitle: "Petunjuk praktis cara mengelola sampah",
+                            width: cardFeatureWidht,
+                            onTap: () {
+                              Get.toNamed("/sarpras");
+                            },
+                          )
                         ],
                       ),
                       const SizedBox(height: paddingMedium * 1)

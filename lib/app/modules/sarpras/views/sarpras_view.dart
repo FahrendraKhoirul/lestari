@@ -28,6 +28,7 @@ class SarprasView extends GetView<SarprasController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text("Sarana dan Prasarana", style: headline2),
+                const SizedBox(height: paddingMedium),
                 Obx(() {
                   if (controller.isLoading.value) {
                     return const Expanded(
@@ -49,11 +50,11 @@ class SarprasView extends GetView<SarprasController> {
                         gridItemCard("assets/icons/icon_pickup.png",
                             controller.sarpras.value.pickup, "Pick up"),
                         gridItemCard("assets/icons/icon_gerobak.png",
-                            controller.sarpras.value.tricycle, "Gerobak"),
+                            controller.sarpras.value.dray, "Gerobak"),
                         gridItemCard("assets/icons/icon_timbangan.png",
-                            controller.sarpras.value.dray, "Timbangan"),
+                            controller.sarpras.value.scale, "Timbangan"),
                         gridItemCard("assets/icons/icon_truk.png",
-                            controller.sarpras.value.scale, "Roda tiga")
+                            controller.sarpras.value.tricycle, "Roda tiga")
                       ],
                     );
                   }

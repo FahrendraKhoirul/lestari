@@ -46,36 +46,36 @@ class Agenda {
     if (json['image'] != null) {
       image = <Image>[];
       json['image'].forEach((v) {
-        image!.add(new Image.fromJson(v));
+        image!.add(Image.fromJson(v));
       });
     }
     if (json['media'] != null) {
       media = <Image>[];
       json['media'].forEach((v) {
-        media!.add(new Image.fromJson(v));
+        media!.add(Image.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['type'] = this.type;
-    data['name'] = this.name;
-    data['datetime'] = this.datetime;
-    data['datetime_id'] = this.datetimeId;
-    data['place'] = this.place;
-    data['pic'] = this.pic;
-    data['desc'] = this.desc;
-    data['user_id'] = this.userId;
-    data['verified_at'] = this.verifiedAt;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    if (this.image != null) {
-      data['image'] = this.image!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = Map<String, dynamic>();
+    data['id'] = id;
+    data['type'] = type;
+    data['name'] = name;
+    data['datetime'] = datetime;
+    data['datetime_id'] = datetimeId;
+    data['place'] = place;
+    data['pic'] = pic;
+    data['desc'] = desc;
+    data['user_id'] = userId;
+    data['verified_at'] = verifiedAt;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    if (image != null) {
+      data['image'] = image!.map((v) => v.toJson()).toList();
     }
-    if (this.media != null) {
-      data['media'] = this.media!.map((v) => v.toJson()).toList();
+    if (media != null) {
+      data['media'] = media!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -140,24 +140,24 @@ class Image {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['model_type'] = this.modelType;
-    data['model_id'] = this.modelId;
-    data['uuid'] = this.uuid;
-    data['collection_name'] = this.collectionName;
-    data['name'] = this.name;
-    data['file_name'] = this.fileName;
-    data['mime_type'] = this.mimeType;
-    data['disk'] = this.disk;
-    data['conversions_disk'] = this.conversionsDisk;
-    data['size'] = this.size;
-    data['order_column'] = this.orderColumn;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['url'] = this.url;
-    data['thumbnail'] = this.thumbnail;
-    data['preview'] = this.preview;
+    final Map<String, dynamic> data = Map<String, dynamic>();
+    data['id'] = id;
+    data['model_type'] = modelType;
+    data['model_id'] = modelId;
+    data['uuid'] = uuid;
+    data['collection_name'] = collectionName;
+    data['name'] = name;
+    data['file_name'] = fileName;
+    data['mime_type'] = mimeType;
+    data['disk'] = disk;
+    data['conversions_disk'] = conversionsDisk;
+    data['size'] = size;
+    data['order_column'] = orderColumn;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['url'] = url;
+    data['thumbnail'] = thumbnail;
+    data['preview'] = preview;
     return data;
   }
 }

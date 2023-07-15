@@ -16,15 +16,7 @@ class KerjasamaController extends GetxController {
     fetchData();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   Future<void> fetchData() async {
     try {

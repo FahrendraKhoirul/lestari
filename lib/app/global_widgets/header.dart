@@ -7,7 +7,7 @@ import 'package:lestari/constants.dart';
 Widget customHeader({
   String title = "title",
   String subtitle = "subtitle",
-  double bottomPadding = paddingMedium,
+  double bottomPadding = paddingLarge,
   double imageWidth = 110,
   required String image,
   required bool backButton,
@@ -26,18 +26,24 @@ Widget customHeader({
         ),
       ],
     ),
-    padding: EdgeInsets.fromLTRB(paddingMedium + paddingXXSmall, paddingSmall,
-        paddingMedium, bottomPadding),
+    padding: EdgeInsets.fromLTRB(
+        paddingMedium, paddingLarge, paddingMedium, bottomPadding),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        // SizedBox(
+        //   height: paddingLarge,
+        // ),
         if (backButton)
-          InkWell(
-            child: const Icon(Icons.arrow_back),
-            onTap: () {
-              Get.back();
-            },
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, paddingSmall),
+            child: InkWell(
+              child: const Icon(Icons.arrow_back),
+              onTap: () {
+                Get.back();
+              },
+            ),
           )
         else
           const SizedBox(

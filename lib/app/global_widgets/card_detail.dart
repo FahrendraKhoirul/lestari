@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lestari/app/global_widgets/custom_buttons.dart';
 import 'package:lestari/constants.dart';
 
-Expanded roundedCardDetail(String title, date, desc, Function() fun) {
+Expanded roundedCardDetail(
+    String prefixTitleDetail, title, date, desc, Function() fun) {
   return Expanded(
     child: Container(
       decoration: const BoxDecoration(
@@ -17,7 +18,7 @@ Expanded roundedCardDetail(String title, date, desc, Function() fun) {
         children: [
           RichText(
             text: TextSpan(
-                text: "Nomor ",
+                text: prefixTitleDetail,
                 style: headline2,
                 children: <TextSpan>[
                   TextSpan(
@@ -32,6 +33,7 @@ Expanded roundedCardDetail(String title, date, desc, Function() fun) {
               style: customTextStyle(size: 14, weight: FontWeight.w600)),
           const SizedBox(height: paddingSmall),
           Container(
+            width: double.infinity,
             margin: const EdgeInsets.only(bottom: paddingSmall),
             padding: const EdgeInsets.all(paddingMedium),
             decoration: BoxDecoration(

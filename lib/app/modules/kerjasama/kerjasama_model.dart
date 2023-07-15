@@ -40,19 +40,19 @@ class Kerjasama {
     if (json['document'] != null) {
       document = <Document>[];
       json['document'].forEach((v) {
-        document!.add(new Document.fromJson(v));
+        document!.add(Document.fromJson(v));
       });
     }
     if (json['media'] != null) {
       media = <Document>[];
       json['media'].forEach((v) {
-        media!.add(new Document.fromJson(v));
+        media!.add(Document.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['id'] = id;
     data['type'] = type;
     data['number'] = number;
@@ -123,7 +123,7 @@ class Document {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['id'] = id;
     data['model_type'] = modelType;
     data['model_id'] = modelId;

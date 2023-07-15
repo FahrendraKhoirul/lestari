@@ -15,7 +15,7 @@ Padding appBar(BuildContext context, String title) {
             onTap: () {
               Navigator.pop(context);
             },
-            child: const Icon(Icons.arrow_back, color: white, size: 20)),
+            child: const Icon(Icons.arrow_back, color: white, size: 25)),
         const Spacer(),
         Text(title,
             style: customTextStyle(
