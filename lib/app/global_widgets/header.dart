@@ -8,6 +8,7 @@ Widget customHeader({
   String title = "title",
   String subtitle = "subtitle",
   double bottomPadding = paddingLarge,
+  double bottomTextPadding = 0,
   double imageWidth = 110,
   required String image,
   required bool backButton,
@@ -26,15 +27,12 @@ Widget customHeader({
         ),
       ],
     ),
-    padding: EdgeInsets.fromLTRB(
-        paddingMedium, paddingLarge, paddingMedium, bottomPadding),
+    padding: EdgeInsets.fromLTRB(paddingMedium, paddingLarge + paddingMedium,
+        paddingMedium, bottomPadding),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        // SizedBox(
-        //   height: paddingLarge,
-        // ),
         if (backButton)
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 0, 0, paddingSmall),
@@ -65,9 +63,12 @@ Widget customHeader({
                   const SizedBox(
                     height: paddingSmall,
                   ),
-                  Text(
-                    subtitle,
-                    style: paragraph,
+                  Padding(
+                    padding: EdgeInsets.only(bottom: bottomTextPadding),
+                    child: Text(
+                      subtitle,
+                      style: paragraph,
+                    ),
                   ),
                 ],
               ),

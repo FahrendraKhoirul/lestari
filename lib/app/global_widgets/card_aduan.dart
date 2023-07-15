@@ -10,13 +10,13 @@ Container listCardItem(String title, desc, image, double screenWidth) {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("12 April 2023",
+            Text(title,
                 style: customTextStyle(size: 16, weight: FontWeight.w600)),
             const SizedBox(height: paddingXXSmall),
             SizedBox(
               width: screenWidth - (paddingMedium * 2) - 100,
-              child: const Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta ullamcorper dui, vel dignissim orci",
+              child: Text(
+                  desc,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2),
             ),
@@ -26,9 +26,9 @@ Container listCardItem(String title, desc, image, double screenWidth) {
           height: 80,
           width: 80,
           decoration: BoxDecoration(
-            image: const DecorationImage(
+            image: DecorationImage(
                 image: NetworkImage(
-                    "https://media.npr.org/assets/img/2012/10/28/trash2-614f006a7e1d70a7fee7c5d5a92788107dd0c8a7.jpg"),
+                    image),
                 fit: BoxFit.cover),
             borderRadius: BorderRadius.circular(roundedSize),
             boxShadow: cardShadow,
