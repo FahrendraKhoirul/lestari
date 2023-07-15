@@ -40,31 +40,31 @@ TextStyle customTextStyle({
 // Text Style
 const headline1 = TextStyle(
   color: earieBlack,
-  fontSize: 30,
+  fontSize: 32,
   fontWeight: FontWeight.w700,
 );
 
 const headline2 = TextStyle(
   color: earieBlack,
-  fontSize: 20,
+  fontSize: 22,
   fontWeight: FontWeight.w600,
 );
 
 const title = TextStyle(
   color: earieBlack,
-  fontSize: 16,
+  fontSize: 18,
   fontWeight: FontWeight.w600,
 );
 
 const paragraph = TextStyle(
   color: earieBlack,
-  fontSize: 14,
+  fontSize: 16,
   fontWeight: FontWeight.w400,
 );
 
 const buttonTextStyle = TextStyle(
   color: white,
-  fontSize: 14,
+  fontSize: 16,
   fontWeight: FontWeight.w600,
 );
 

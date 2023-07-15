@@ -23,23 +23,25 @@ class LocationView extends GetView<LocationController> {
                       image: "assets/images/illus_lokasi.png",
                       backButton: false,
                       title: 'Lokasi',
-                      imageWidth: 75,
+                      imageWidth: 85,
                       subtitle:
                           'Temukan infrastruktur persampahan \ndi Nusa Tenggara Barat'),
-                  Obx(() => ListView.builder(
-                      padding: const EdgeInsets.all(paddingMedium),
-                      physics: const NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      itemCount: controller.locations.length,
-                      itemBuilder: (context, index) {
-                        String titleText =
-                            controller.locations[index].label ?? '';
-                        int subtitleText =
-                            controller.locations[index].count ?? 0;
-                        String images = controller.listImage[index];
-                        return cardLocation(
-                            titleText, subtitleText.toString(), images, () {});
-                      }))
+                  Obx(() => controller.isLoading.value
+                      ? CircularProgressIndicator()
+                      : ListView.builder(
+                          padding: const EdgeInsets.all(paddingMedium),
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: controller.locations.length,
+                          itemBuilder: (context, index) {
+                            String titleText =
+                                controller.locations[index].label ?? '';
+                            int subtitleText =
+                                controller.locations[index].count ?? 0;
+                            String images = controller.listImage[index];
+                            return cardLocation(titleText,
+                                subtitleText.toString(), images, () {});
+                          }))
                 ],
               ),
             ),
