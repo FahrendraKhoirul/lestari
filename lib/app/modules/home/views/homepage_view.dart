@@ -91,7 +91,9 @@ class HomePageView extends GetView<HomePageController> {
                               subtitle:
                                   "Petunjuk praktis cara mengelola sampah",
                               width: cardFeatureWidht,
-                              onTap: () {}),
+                              onTap: () {
+                                Get.toNamed("/aduan");
+                              }),
                           cardButtonGrid(
                               icon: Image.asset(
                                   "assets/icons/icon_kerja_sama.png",

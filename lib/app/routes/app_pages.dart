@@ -1,5 +1,8 @@
 import 'package:get/get.dart';
+import 'package:lestari/app/modules/landing/views/splash_view.dart';
 
+import '../modules/aduan/bindings/aduan_binding.dart';
+import '../modules/aduan/views/aduan_view.dart';
 import '../modules/data_sampah/bindings/data_sampah_binding.dart';
 import '../modules/data_sampah/views/data_sampah_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -9,6 +12,8 @@ import '../modules/kerjasama/bindings/kerjasama_binding.dart';
 import '../modules/kerjasama/detail_kerjasama/bindings/detail_kerjasama_binding.dart';
 import '../modules/kerjasama/detail_kerjasama/views/detail_kerjasama_view.dart';
 import '../modules/kerjasama/views/kerjasama_view.dart';
+import '../modules/landing/bindings/landing_binding.dart';
+import '../modules/landing/views/landing_view.dart';
 import '../modules/panduan/bindings/panduan_binding.dart';
 import '../modules/panduan/detail_panduan/bindings/detail_panduan_binding.dart';
 import '../modules/panduan/detail_panduan/views/detail_panduan_view.dart';
@@ -21,7 +26,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.LANDING;
 
   static final routes = [
     GetPage(
@@ -69,6 +74,21 @@ class AppPages {
           binding: DetailPanduanBinding(),
         ),
       ],
+    ),
+    GetPage(
+      name: _Paths.ADUAN,
+      page: () => const AduanView(),
+      binding: AduanBinding(),
+    ),
+    GetPage(
+      name: _Paths.LANDING,
+      page: () => const LandingView(),
+      binding: LandingBinding(),
+    ),
+    GetPage(
+      name: _Paths.SPLASH,
+      page: () => const SplashView(),
+      binding: LandingBinding(),
     ),
   ];
 }

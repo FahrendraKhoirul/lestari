@@ -18,8 +18,6 @@ class KerjasamaController extends GetxController {
     kerjasamaBySearch.value.addAll(kerjasama);
   }
 
-
-
   Future<void> fetchData() async {
     try {
       isLoading.value = true;

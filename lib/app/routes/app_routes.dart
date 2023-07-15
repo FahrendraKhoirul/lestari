@@ -12,6 +12,9 @@ abstract class Routes {
   static const PANDUAN = _Paths.PANDUAN;
   static const DETAIL_PANDUAN = _Paths.PANDUAN + _Paths.DETAIL_PANDUAN;
   static const DETAIL_KERJASAMA = _Paths.KERJASAMA + _Paths.DETAIL_KERJASAMA;
+  static const ADUAN = _Paths.ADUAN;
+  static const LANDING = _Paths.LANDING;
+  static const SPLASH = _Paths.SPLASH;
 }
 
 abstract class _Paths {
@@ -24,4 +27,7 @@ abstract class _Paths {
   static const PANDUAN = '/panduan';
   static const DETAIL_PANDUAN = '/detail-panduan';
   static const DETAIL_KERJASAMA = '/detail-kerjasama';
+  static const ADUAN = '/aduan';
+  static const LANDING = '/landing';
+  static const SPLASH = '/splash';
 }

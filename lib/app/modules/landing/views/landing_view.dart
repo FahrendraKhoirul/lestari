@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+
+import 'package:get/get.dart';
+import 'package:lestari/app/global_widgets/custom_buttons.dart';
+import 'package:lestari/app/global_widgets/landing_widgets.dart';
 import 'package:lestari/constants.dart';
 
-import '../../app/global_widgets/custom_buttons.dart';
-import '../../app/global_widgets/landing_widgets.dart';
+import '../controllers/landing_controller.dart';
 
-class Landing extends StatelessWidget {
-  const Landing({super.key});
-
+class LandingView extends GetView<LandingController> {
+  const LandingView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     var heightScreen = MediaQuery.of(context).size.height;
@@ -54,7 +56,9 @@ class Landing extends StatelessWidget {
                 height: (heightScreen - 320) * 0.37,
               ),
             ),
-            buttonExpanded("Continue", () {}),
+            buttonExpanded("Continue", () {
+              Get.offAll("/home");
+            }),
           ],
         ),
       ),
