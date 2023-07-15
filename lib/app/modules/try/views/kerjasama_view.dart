@@ -36,7 +36,8 @@ class KerjasamaView extends GetView {
                           "7/SPPP/CL/2022",
                           "02 Maret 2022",
                           "Kerjasama Pemerintah",
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed lacus a elit");
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed lacus a elit",
+                          () {});
                     },
                   )
                 ],

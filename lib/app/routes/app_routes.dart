@@ -11,6 +11,7 @@ abstract class Routes {
   static const KERJASAMA = _Paths.KERJASAMA;
   static const PANDUAN = _Paths.PANDUAN;
   static const DETAIL_PANDUAN = _Paths.PANDUAN + _Paths.DETAIL_PANDUAN;
+  static const DETAIL_KERJASAMA = _Paths.KERJASAMA + _Paths.DETAIL_KERJASAMA;
 }
 
 abstract class _Paths {
@@ -22,4 +23,5 @@ abstract class _Paths {
   static const KERJASAMA = '/kerjasama';
   static const PANDUAN = '/panduan';
   static const DETAIL_PANDUAN = '/detail-panduan';
+  static const DETAIL_KERJASAMA = '/detail-kerjasama';
 }

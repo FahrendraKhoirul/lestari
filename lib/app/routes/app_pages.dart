@@ -6,6 +6,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/views/location_view.dart';
 import '../modules/kerjasama/bindings/kerjasama_binding.dart';
+import '../modules/kerjasama/detail_kerjasama/bindings/detail_kerjasama_binding.dart';
+import '../modules/kerjasama/detail_kerjasama/views/detail_kerjasama_view.dart';
 import '../modules/kerjasama/views/kerjasama_view.dart';
 import '../modules/panduan/bindings/panduan_binding.dart';
 import '../modules/panduan/detail_panduan/bindings/detail_panduan_binding.dart';
@@ -48,6 +50,13 @@ class AppPages {
       name: _Paths.KERJASAMA,
       page: () => const KerjasamaView(),
       binding: KerjasamaBinding(),
+      children: [
+        GetPage(
+          name: _Paths.DETAIL_KERJASAMA,
+          page: () => const DetailKerjasamaView(),
+          binding: DetailKerjasamaBinding(),
+        ),
+      ],
     ),
     GetPage(
       name: _Paths.PANDUAN,

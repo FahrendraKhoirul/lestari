@@ -5,15 +5,17 @@ import 'package:lestari/app/modules/kerjasama/kerjasama_model.dart';
 import 'package:http/http.dart' as http;
 
 class KerjasamaController extends GetxController {
-  //TODO: Implement KerjasamaController
   final kerjasama = <Kerjasama>[].obs;
+  final kerjasamaBySearch = <Kerjasama>[].obs;
+  final searchValue = ''.obs;
   final isLoading = false.obs;
 
   final count = 0.obs;
   @override
-  void onInit() {
+  Future<void> onInit() async {
     super.onInit();
-    fetchData();
+    await fetchData();
+    kerjasamaBySearch.value.addAll(kerjasama);
   }
 
 
@@ -34,5 +36,17 @@ class KerjasamaController extends GetxController {
     } finally {
       isLoading.value = false;
     }
+  }
+
+  void searchData() {
+    kerjasamaBySearch.value = kerjasama.where((value) {
+      final keywordNumber = value.number?.toLowerCase();
+      final keywordType = value.type?.toLowerCase();
+      final listFromNumber =
+          keywordNumber?.contains(searchValue.value.toLowerCase()) ?? false;
+      final listFromType =
+          keywordType?.contains(searchValue.value.toLowerCase()) ?? false;
+      return listFromNumber || listFromType;
+    }).toList();
   }
 }
