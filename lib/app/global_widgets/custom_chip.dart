@@ -6,7 +6,7 @@ Widget customChip(String text, VoidCallback onTap, Color color) {
       onTap: onTap,
       child: Container(
         // outline rounded border
-        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: color, width: 1)),

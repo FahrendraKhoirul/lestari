@@ -15,10 +15,6 @@ class SarprasController extends GetxController {
     fetchData();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
   Future<void> fetchData() async {
     try {

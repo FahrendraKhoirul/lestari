@@ -23,13 +23,14 @@ class LocationView extends GetView<LocationController> {
                       image: "assets/images/illus_lokasi.png",
                       backButton: false,
                       title: 'Lokasi',
-                      imageWidth: 85,
+                      imageWidth: 90,
                       subtitle:
-                          'Temukan infrastruktur persampahan \ndi Nusa Tenggara Barat'),
+                          'Temukan infrastruktur persampahan di Nusa Tenggara Barat'),
                   Obx(() => controller.isLoading.value
                       ? const CircularProgressIndicator()
                       : ListView.builder(
-                          padding: const EdgeInsets.all(paddingMedium),
+                          padding: const EdgeInsets.fromLTRB(paddingMedium,
+                              paddingXXSmall, paddingMedium, paddingXXSmall),
                           physics: const NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
                           itemCount: controller.locations.length,

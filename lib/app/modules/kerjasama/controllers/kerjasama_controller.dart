@@ -18,15 +18,7 @@ class KerjasamaController extends GetxController {
     kerjasamaBySearch.value.addAll(kerjasama);
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   Future<void> fetchData() async {
     try {

@@ -16,6 +16,7 @@ class KerjasamaView extends GetView<KerjasamaController> {
     var screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      backgroundColor: white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -33,6 +34,7 @@ class KerjasamaView extends GetView<KerjasamaController> {
                     controller.searchValue.value = value.toLowerCase();
                     controller.searchData();
                   }),
+                  const SizedBox(height: paddingSmall),
                   Obx(() => controller.isLoading.value == true
                       ? const Center(
                           child: CircularProgressIndicator(color: darkGreen))
