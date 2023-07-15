@@ -29,31 +29,46 @@ class KerjasamaView extends GetView<KerjasamaController> {
                   horizontal: paddingMedium, vertical: paddingMedium),
               child: Column(
                 children: [
-                  searchField(screenWidth, "Cari kerjasama...", (value) {}),
-                  Obx(() => ListView.builder(
-                        itemCount: controller.kerjasama.length,
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemBuilder: (context, index) {
-                          String number = controller.kerjasama[index].number ?? '';
-                          String date =
-                              controller.kerjasama[index].date ?? '';
-                          String type =
-                              controller.kerjasama[index].type ?? '';
-                          String desc =
-                              controller.kerjasama[index].description ?? '';
+                  searchField(screenWidth, "Cari kerjasama...", (value) {
+                    controller.searchValue.value = value.toLowerCase();
+                    controller.searchData();
+                  }),
+                  Obx(() => controller.isLoading.value == true
+                      ? const Center(
+                          child: CircularProgressIndicator(color: darkGreen))
+                      : controller.kerjasamaBySearch.isEmpty
+                          ? SizedBox(
+                              height: Get.height * 0.5,
+                              child: const Center(
+                                child: Text('Tidak ada kerjasama'),
+                              ),
+                            )
+                          : ListView.builder(
+                              itemCount: controller.kerjasamaBySearch.length,
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              itemBuilder: (context, index) {
+                                String number = controller
+                                        .kerjasamaBySearch[index].number ??
+                                    '';
+                                String date =
+                                    controller.kerjasamaBySearch[index].date ??
+                                        '';
+                                String type =
+                                    controller.kerjasamaBySearch[index].type ??
+                                        '';
+                                String desc = controller
+                                        .kerjasamaBySearch[index].description ??
+                                    '';
 
-                          return controller.isLoading.value == true
-                              ? const Center(
-                                  child: CircularProgressIndicator(
-                                      color: darkGreen))
-                              : cardKerjasama(
-                                  number,
-                                  date,
-                                  "Kerjasama $type",
-                                  desc);
-                        },
-                      ))
+                                return cardKerjasama(
+                                    number, date, "Kerjasama $type", desc, () {
+                                  Get.toNamed('/kerjasama/detail-kerjasama',
+                                      arguments:
+                                          controller.kerjasamaBySearch[index]);
+                                });
+                              },
+                            ))
                 ],
               ),
             )

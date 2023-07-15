@@ -27,7 +27,7 @@ class LocationView extends GetView<LocationController> {
                       subtitle:
                           'Temukan infrastruktur persampahan \ndi Nusa Tenggara Barat'),
                   Obx(() => controller.isLoading.value
-                      ? CircularProgressIndicator()
+                      ? const CircularProgressIndicator()
                       : ListView.builder(
                           padding: const EdgeInsets.all(paddingMedium),
                           physics: const NeverScrollableScrollPhysics(),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lestari/app/global_widgets/custom_buttons.dart';
 import 'package:lestari/constants.dart';
 
-Container cardKerjasama(String number, date, work, desc) {
+Container cardKerjasama(String number, date, work, desc, Function() fun) {
   return Container(
     margin: const EdgeInsets.only(bottom: paddingSmall),
     padding: const EdgeInsets.symmetric(
@@ -38,7 +38,7 @@ Container cardKerjasama(String number, date, work, desc) {
         const SizedBox(height: paddingSmall),
         Align(
             alignment: Alignment.bottomRight,
-            child: buttonSmall("Detail", () => {}, paddingXSmall))
+            child: buttonSmall("Detail", fun, paddingXSmall))
       ],
     ),
   );

@@ -69,7 +69,7 @@ class AgendaView extends GetView<AgendaController> {
                     ),
                   ),
                   Obx(() => controller.isLoading.value
-                      ? Container(
+                      ? SizedBox(
                           height: Get.height * 0.5,
                           child: const Center(
                               child: CircularProgressIndicator(
@@ -77,7 +77,7 @@ class AgendaView extends GetView<AgendaController> {
                             color: darkGreen,
                           )))
                       : controller.agendasBySearch.isEmpty
-                          ? Container(
+                          ? SizedBox(
                               height: Get.height * 0.5,
                               child: const Center(
                                 child: Text('Tidak ada agenda'),
