@@ -6,10 +6,16 @@ abstract class Routes {
   // static const HOME = _Paths.HOME;
   static const HOME = _Paths.HOME;
   static const LOCATION = _Paths.HOME + _Paths.LOCATION;
+  static const SARPRAS = _Paths.SARPRAS;
+  static const DATA_SAMPAH = _Paths.DATA_SAMPAH;
+  static const KERJASAMA = _Paths.KERJASAMA;
 }
 
 abstract class _Paths {
   _Paths._();
   static const HOME = '/home';
   static const LOCATION = '/location';
+  static const DATA_SAMPAH = '/data-sampah';
+  static const SARPRAS = '/sarpras';
+  static const KERJASAMA = '/kerjasama';
 }
