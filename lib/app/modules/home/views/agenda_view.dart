@@ -38,7 +38,7 @@ class AgendaView extends GetView<AgendaController> {
                               valueField.toLowerCase();
                           controller.sortBySearch();
                         }),
-                        SizedBox(
+                        const SizedBox(
                           height: paddingXXSmall,
                         ),
                         Obx(() => Row(
@@ -49,14 +49,14 @@ class AgendaView extends GetView<AgendaController> {
                                         controller.changeEventTypeIndex(0);
                                         controller.changeEventType("Offline");
                                       }, lightBlack.withOpacity(0.6)),
-                                SizedBox(width: paddingXXSmall),
+                                const SizedBox(width: paddingXXSmall),
                                 controller.eventTypeSelectedIndex == 1
                                     ? customChip("Online", () {}, darkGreen)
                                     : customChip("Online", () {
                                         controller.changeEventTypeIndex(1);
                                         controller.changeEventType("Online");
                                       }, lightBlack.withOpacity(0.6)),
-                                SizedBox(width: paddingXXSmall),
+                                const SizedBox(width: paddingXXSmall),
                                 controller.eventTypeSelectedIndex == 2
                                     ? customChip("Hybrid", () {}, darkGreen)
                                     : customChip("Hybrid", () {
@@ -69,22 +69,37 @@ class AgendaView extends GetView<AgendaController> {
                     ),
                   ),
                   Obx(() => controller.isLoading.value
-                      ? CircularProgressIndicator()
-                      : ListView.builder(
-                          padding: EdgeInsets.fromLTRB(
-                              paddingMedium, 0, paddingMedium, paddingMedium),
-                          shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
-                          itemCount: controller.agendasBySearch.length,
-                          itemBuilder: (context, index) {
-                            final titleText =
-                                controller.agendasBySearch[index].name ?? '';
-                            final subtitleText =
-                                controller.agendasBySearch[index].datetimeId ??
+                      ? Container(
+                          height: Get.height * 0.5,
+                          child: const Center(
+                              child: CircularProgressIndicator(
+                            // gradient colors in color parameter
+                            color: darkGreen,
+                          )))
+                      : controller.agendasBySearch.isEmpty
+                          ? Container(
+                              height: Get.height * 0.5,
+                              child: const Center(
+                                child: Text('Tidak ada agenda'),
+                              ),
+                            )
+                          : ListView.builder(
+                              padding: const EdgeInsets.fromLTRB(paddingMedium,
+                                  0, paddingMedium, paddingMedium),
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              itemCount: controller.agendasBySearch.length,
+                              itemBuilder: (context, index) {
+                                final titleText =
+                                    controller.agendasBySearch[index].name ??
+                                        '';
+                                final subtitleText = controller
+                                        .agendasBySearch[index].datetimeId ??
                                     '';
-                            return cardAgenda(titleText, subtitleText, () {});
-                          },
-                        ))
+                                return cardAgenda(
+                                    titleText, subtitleText, () {});
+                              },
+                            ))
                 ],
               ),
             ),

@@ -33,12 +33,13 @@ class AgendaController extends GetxController {
     try {
       isLoading.value = true;
       final response = await http.get(Uri.parse(
-          'https://lestari.ntbprov.go.id/api/event?type=$eventTypeSelected'));
+          'https://lestari.ntbprov.go.id/api/event?type=${eventTypeSelected.value}'));
       if (response.statusCode == 200) {
         final List<dynamic> responseBody = jsonDecode(response.body);
         agendas.value = responseBody
             .map((json) => Agenda.fromJson(json as Map<String, dynamic>))
             .toList();
+        agendasBySearch.value.addAll(agendas);
       }
     } catch (e) {
       print('Error while fetching locations: $e');
@@ -47,8 +48,10 @@ class AgendaController extends GetxController {
     }
   }
 
-  void changeEventType(String type) {
+  Future<void> changeEventType(String type) async {
     eventTypeSelected.value = type;
+    agendas.clear();
+    agendasBySearch.clear();
     fetchData();
   }
 

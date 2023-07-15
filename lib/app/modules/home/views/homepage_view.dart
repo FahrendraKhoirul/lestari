@@ -36,7 +36,7 @@ class HomePageView extends GetView<HomePageController> {
                             top: paddingLarge * 1.5, bottom: paddingMedium * 2),
                         child: Text("Selamat Datang",
                             style: customTextStyle(
-                                size: 18,
+                                size: 20,
                                 weight: FontWeight.w600,
                                 color: extraDarkGreen)),
                       ),
@@ -50,7 +50,7 @@ class HomePageView extends GetView<HomePageController> {
                           alignment: Alignment.centerLeft,
                           child: Text("6 fitur tersedia",
                               style: customTextStyle(
-                                  size: 12,
+                                  size: 14,
                                   color: grey,
                                   weight: FontWeight.w400))),
                       const SizedBox(height: paddingXSmall),

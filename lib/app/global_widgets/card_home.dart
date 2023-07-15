@@ -19,7 +19,7 @@ Widget cardHome() {
             child: Text(
               "Ayo ikut berpartisipasi",
               style: customTextStyle(
-                  size: 12, weight: FontWeight.w600, color: earieBlack),
+                  size: 16, weight: FontWeight.w600, color: earieBlack),
             ),
           ),
           const SizedBox(height: paddingSmall),

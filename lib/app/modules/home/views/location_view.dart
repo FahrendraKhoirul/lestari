@@ -23,7 +23,7 @@ class LocationView extends GetView<LocationController> {
                       image: "assets/images/illus_lokasi.png",
                       backButton: false,
                       title: 'Lokasi',
-                      imageWidth: 75,
+                      imageWidth: 85,
                       subtitle:
                           'Temukan infrastruktur persampahan \ndi Nusa Tenggara Barat'),
                   Obx(() => controller.isLoading.value

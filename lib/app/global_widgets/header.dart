@@ -7,8 +7,8 @@ import 'package:lestari/constants.dart';
 Widget customHeader({
   String title = "title",
   String subtitle = "subtitle",
-  double bottomPadding = paddingSmall,
-  double imageWidth = 95,
+  double bottomPadding = paddingMedium,
+  double imageWidth = 110,
   required String image,
   required bool backButton,
 }) {

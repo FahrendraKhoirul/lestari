@@ -25,13 +25,13 @@ Widget cardButtonGrid(
           Text(
             title,
             style: customTextStyle(
-                size: 12, weight: FontWeight.w600, color: earieBlack),
+                size: 16, weight: FontWeight.w600, color: earieBlack),
           ),
           const SizedBox(height: paddingXXSmall),
           Text(
             subtitle,
             style: customTextStyle(
-                size: 10, weight: FontWeight.w400, color: lightBlack),
+                size: 14, weight: FontWeight.w400, color: lightBlack),
             maxLines: 4,
           ),
         ],
