@@ -22,6 +22,6 @@ Thank you for using the Lestari app!
 
 ## Contributors
 
-**Internship July 2023**
+**KOMINFOTIK NTB Internship, July 2023**
 - Fahrendra Khoirul Ihtada ([@fahrendrakhoirul](https://github.com/FahrendraKhoirul))
 - Rizha Alfianita ([@rizhaalfianita](https://github.com/rizhaalfianita))
