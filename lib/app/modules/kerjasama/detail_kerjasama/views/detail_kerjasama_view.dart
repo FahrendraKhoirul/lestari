@@ -12,18 +12,15 @@ class DetailKerjasamaView extends GetView<DetailKerjasamaController> {
   const DetailKerjasamaView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Kerjasama datas  = Get.arguments;
+    final Kerjasama datas = Get.arguments;
 
     return Scaffold(
       backgroundColor: extraDarkGreen,
       body: Column(
         children: [
           appBar(context, "Detail Kerjasama"),
-          roundedCardDetail(
-              datas.number as String,
-              datas.date,
-              datas.description,
-              () {})
+          roundedCardDetail("Nomor ", datas.number as String, datas.date,
+              datas.description, () {})
         ],
       ),
     );
