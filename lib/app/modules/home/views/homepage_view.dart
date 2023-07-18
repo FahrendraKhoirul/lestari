@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lestari/app/global_widgets/carousel_widget.dart';
 import 'package:lestari/app/global_widgets/myscrollbeahaviour.dart';
+import 'package:lestari/app/modules/home/carousel_model.dart';
 import 'package:lestari/app/modules/home/controllers/home_page_controller.dart';
 import '../../../../constants.dart';
 import '../../../global_widgets/card_button_grid.dart';
@@ -133,7 +135,8 @@ class HomePageView extends GetView<HomePageController> {
                           )
                         ],
                       ),
-                      const SizedBox(height: paddingMedium * 1)
+                      const SizedBox(height: paddingMedium * 1),
+                      CarouselWidget()
                     ]),
               ),
             ])),
