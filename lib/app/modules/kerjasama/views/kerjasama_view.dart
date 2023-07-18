@@ -34,10 +34,14 @@ class KerjasamaView extends GetView<KerjasamaController> {
                     controller.searchValue.value = value.toLowerCase();
                     controller.searchData();
                   }),
-                  const SizedBox(height: paddingSmall),
+                  // const SizedBox(height: paddingSmall),
                   Obx(() => controller.isLoading.value == true
-                      ? const Center(
-                          child: CircularProgressIndicator(color: darkGreen))
+                      ? Container(
+                          height: Get.height * 0.5,
+                          child: const Center(
+                              child:
+                                  CircularProgressIndicator(color: darkGreen)),
+                        )
                       : controller.kerjasamaBySearch.isEmpty
                           ? SizedBox(
                               height: Get.height * 0.5,

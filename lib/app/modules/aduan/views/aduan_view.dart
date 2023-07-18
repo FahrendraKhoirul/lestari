@@ -6,7 +6,6 @@ import 'package:lestari/app/global_widgets/card_aduan.dart';
 import 'package:lestari/app/global_widgets/header.dart';
 import 'package:lestari/app/global_widgets/search_field.dart';
 import 'package:lestari/constants.dart';
-import 'package:intl/date_symbol_data_local.dart';
 
 import '../controllers/aduan_controller.dart';
 
@@ -41,8 +40,12 @@ class AduanView extends GetView<AduanController> {
                     controller.searchData();
                   }),
                   Obx(() => controller.isLoading.value
-                      ? const Center(
-                          child: CircularProgressIndicator(color: darkGreen))
+                      ? Container(
+                          height: Get.height * 0.5,
+                          child: const Center(
+                              child:
+                                  CircularProgressIndicator(color: darkGreen)),
+                        )
                       : controller.aduanBySearch.isEmpty
                           ? SizedBox(
                               height: Get.height * 0.5,
@@ -71,7 +74,11 @@ class AduanView extends GetView<AduanController> {
                                 String imageUrl =
                                     controller.aduanBySearch[index].image ?? '';
                                 return listCardItem(
-                                    keywordDate, desc, imageUrl, screenWidth);
+                                    keywordDate,
+                                    desc,
+                                    imageUrl,
+                                    screenWidth,
+                                    controller.aduanBySearch[index]);
                               }))
                 ],
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lestari/constants.dart';
 
 Widget cardHome() {
@@ -27,33 +28,43 @@ Widget cardHome() {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    "assets/icons/icon_komunitas.png",
-                    height: 50,
-                  ),
-                  const SizedBox(height: paddingXXSmall),
-                  const Text(
-                    "Komunitas",
-                    style: paragraph,
-                  )
-                ],
+              GestureDetector(
+                onTap: () {
+                  Get.toNamed("/komunitas");
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/icons/icon_komunitas.png",
+                      height: 50,
+                    ),
+                    const SizedBox(height: paddingXXSmall),
+                    const Text(
+                      "Komunitas",
+                      style: paragraph,
+                    )
+                  ],
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    "assets/icons/icon_banksampah.png",
-                    height: 50,
-                  ),
-                  const SizedBox(height: paddingXXSmall),
-                  const Text(
-                    "Bank Sampah",
-                    style: paragraph,
-                  )
-                ],
+              GestureDetector(
+                onTap: () {
+                  Get.toNamed("/bank-sampah");
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/icons/icon_banksampah.png",
+                      height: 50,
+                    ),
+                    const SizedBox(height: paddingXXSmall),
+                    const Text(
+                      "Bank Sampah",
+                      style: paragraph,
+                    )
+                  ],
+                ),
               )
             ],
           )

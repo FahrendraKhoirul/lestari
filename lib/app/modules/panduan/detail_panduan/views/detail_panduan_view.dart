@@ -15,14 +15,17 @@ class DetailPanduanView extends GetView<DetailPanduanController> {
     final Panduan data = Get.arguments;
 
     return Scaffold(
-      backgroundColor: extraDarkGreen,
-      body: Column(
-        children: [
-          appBar(context, "Detail Panduan"),
-          roundedCardDetail(data.title ?? '', "", data.type ?? "",
-              data.desc ?? "tidak ada deskripsi", () {})
-        ],
-      ),
-    );
+        backgroundColor: extraDarkGreen,
+        body: Column(
+          children: [
+            appBar(context, "Detail Panduan"),
+            roundedCardDetail(data.title ?? '', "", data.type ?? "",
+                data.desc ?? "tidak ada deskripsi", () {
+              int id = data.file?[0].id ?? 0;
+              String filename = data.file?[0].fileName ?? "";
+              controller.launchPDF(id, filename);
+            })
+          ],
+        ));
   }
 }

@@ -117,7 +117,9 @@ class HomePageView extends GetView<HomePageController> {
                             title: "NTB Hijau",
                             subtitle: "Petunjuk praktis cara mengelola sampah",
                             width: cardFeatureWidht,
-                            onTap: () {},
+                            onTap: () {
+                              Get.toNamed("/ntb-hijau");
+                            },
                           ),
                           cardButtonGrid(
                             icon: Image.asset("assets/icons/icon_sarpras.png",
@@ -138,7 +140,9 @@ class HomePageView extends GetView<HomePageController> {
           ),
         ),
         floatingActionButton: FloatingActionButton.extended(
-          onPressed: () {},
+          onPressed: () {
+            controller.launchURL();
+          },
           label: Text("Tanya Lestari",
               style: customTextStyle(size: 14, color: white)),
           icon: Image.asset("assets/icons/icon_tanya.png", height: 20),

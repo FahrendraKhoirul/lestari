@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:lestari/app/modules/aduan/aduan_model.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
-import 'package:intl/date_symbol_data_local.dart';
 
 class AduanController extends GetxController {
   final aduan = <Aduan>[].obs;

@@ -11,7 +11,7 @@ Widget cardAgenda(
     child: Container(
       margin: const EdgeInsets.only(bottom: paddingSmall),
       width: double.infinity,
-      height: 95,
+      height: 120,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: Colors.white,

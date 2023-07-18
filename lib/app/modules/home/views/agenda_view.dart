@@ -96,8 +96,11 @@ class AgendaView extends GetView<AgendaController> {
                                 final subtitleText = controller
                                         .agendasBySearch[index].datetimeId ??
                                     '';
-                                return cardAgenda(
-                                    titleText, subtitleText, () {});
+                                return cardAgenda(titleText, subtitleText, () {
+                                  Get.toNamed("/detail-agenda",
+                                      arguments:
+                                          controller.agendasBySearch[index]);
+                                });
                               },
                             ))
                 ],

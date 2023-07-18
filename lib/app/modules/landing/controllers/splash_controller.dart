@@ -3,12 +3,8 @@ import 'dart:async';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {
-  final count = 0.obs;
   @override
   void onInit() {
-    Timer(const Duration(seconds: 2), () {
-      Get.toNamed("/landing");
-    });
     super.onInit();
   }
 
@@ -22,5 +18,9 @@ class SplashController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void endScreen() {
+    Future.delayed(const Duration(seconds: 4), () {
+      Get.offAllNamed("/landing");
+    });
+  }
 }

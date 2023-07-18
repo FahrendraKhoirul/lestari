@@ -6,7 +6,7 @@ Widget buttonExpanded(String text, Function() fun) {
     width: double.infinity,
     height: 52,
     child: ElevatedButton(
-      onPressed: () {},
+      onPressed: fun,
       style: ElevatedButton.styleFrom(
           backgroundColor: darkGreen,
           shape: RoundedRectangleBorder(
