@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lestari/app/global_widgets/card_aduan.dart';
 import 'package:lestari/app/global_widgets/search_field.dart';
+import 'package:lestari/app/modules/aduan/aduan_model.dart';
 import 'package:lestari/constants.dart';
 
 class AduanView extends GetView {
@@ -33,7 +34,8 @@ class AduanView extends GetView {
                             "12 April 2023",
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta ullamcorper dui, vel dignissim orci",
                             "https://publicinterestnetwork.org/wp-content/uploads/2018/02/MN-dump.jpg",
-                            screenWidth);
+                            screenWidth,
+                            Aduan());
                       })
                 ],
               ),

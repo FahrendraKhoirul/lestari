@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 import 'package:get/get.dart';
+import 'package:lestari/app/modules/landing/controllers/splash_controller.dart';
 import 'package:lestari/constants.dart';
 
-class SplashView extends GetView {
+class SplashView extends GetView<SplashController> {
   const SplashView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var widthScreen = MediaQuery.of(context).size.width;
-
+    controller.endScreen();
     return Scaffold(
         body: Column(
       crossAxisAlignment: CrossAxisAlignment.center,

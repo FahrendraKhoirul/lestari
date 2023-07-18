@@ -27,15 +27,16 @@ Widget customHeader({
         ),
       ],
     ),
-    padding: EdgeInsets.fromLTRB(paddingMedium, paddingLarge + paddingMedium,
-        paddingMedium, bottomPadding),
+    padding: EdgeInsets.fromLTRB(
+        paddingMedium, paddingLarge, paddingMedium, bottomPadding),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         if (backButton)
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 0, paddingSmall),
+            padding:
+                const EdgeInsets.fromLTRB(0, paddingMedium, 0, paddingSmall),
             child: InkWell(
               child: const Icon(Icons.arrow_back),
               onTap: () {

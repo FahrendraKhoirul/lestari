@@ -28,7 +28,7 @@ class SarprasView extends GetView<SarprasController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text("Sarana dan Prasarana", style: headline2),
-                const SizedBox(height: paddingMedium),
+                // const SizedBox(height: paddingMedium),
                 Obx(() {
                   if (controller.isLoading.value) {
                     return const Expanded(

@@ -57,7 +57,7 @@ class LandingView extends GetView<LandingController> {
               ),
             ),
             buttonExpanded("Continue", () {
-              Get.offAll("/home");
+              Get.offAllNamed("/home");
             }),
           ],
         ),

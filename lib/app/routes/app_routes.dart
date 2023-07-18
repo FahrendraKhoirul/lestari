@@ -15,6 +15,12 @@ abstract class Routes {
   static const ADUAN = _Paths.ADUAN;
   static const LANDING = _Paths.LANDING;
   static const SPLASH = _Paths.SPLASH;
+  static const NTB_HIJAU = _Paths.NTB_HIJAU;
+  static const KOMUNITAS = _Paths.KOMUNITAS;
+  static const BANK_SAMPAH = _Paths.BANK_SAMPAH;
+  static const DETAIL_LOKASI = _Paths.DETAIL_LOKASI;
+  static const DETAIL_AGENDA = _Paths.DETAIL_AGENDA;
+  static const DETAIL_ADUAN = _Paths.ADUAN + _Paths.DETAIL_ADUAN;
 }
 
 abstract class _Paths {
@@ -30,4 +36,10 @@ abstract class _Paths {
   static const ADUAN = '/aduan';
   static const LANDING = '/landing';
   static const SPLASH = '/splash';
+  static const NTB_HIJAU = '/ntb-hijau';
+  static const KOMUNITAS = '/komunitas';
+  static const BANK_SAMPAH = '/bank-sampah';
+  static const DETAIL_LOKASI = '/detail-lokasi';
+  static const DETAIL_AGENDA = '/detail-agenda';
+  static const DETAIL_ADUAN = '/detail-aduan';
 }

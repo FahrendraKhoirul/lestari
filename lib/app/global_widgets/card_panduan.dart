@@ -12,7 +12,7 @@ Widget cardPanduan(
     child: Container(
       margin: const EdgeInsets.only(bottom: paddingSmall),
       width: double.infinity,
-      height: 125,
+      height: 130,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: Colors.white,
