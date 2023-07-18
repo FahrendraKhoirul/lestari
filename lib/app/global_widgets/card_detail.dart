@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lestari/app/global_widgets/custom_buttons.dart';
 import 'package:lestari/constants.dart';
 
 Expanded roundedCardDetail(
-    String prefixTitleDetail, title, date, desc, Function() fun) {
+    String prefixTitleDetail, title, date, desc, VoidCallback fun) {
   return Expanded(
     child: Container(
       decoration: const BoxDecoration(
@@ -47,7 +48,7 @@ Expanded roundedCardDetail(
             ),
           ),
           const SizedBox(height: paddingSmall),
-          Center(child: buttonSmall("Unduh berkas", () => null, paddingSmall))
+          Center(child: buttonSmall("Unduh berkas", fun, paddingSmall))
         ],
       ),
     ),

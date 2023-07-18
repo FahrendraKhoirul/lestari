@@ -27,7 +27,12 @@ class LocationView extends GetView<LocationController> {
                       subtitle:
                           'Temukan infrastruktur persampahan di Nusa Tenggara Barat'),
                   Obx(() => controller.isLoading.value
-                      ? const CircularProgressIndicator()
+                      ? Container(
+                          height: Get.height * 0.5,
+                          child: Center(
+                              child: const CircularProgressIndicator(
+                            color: darkGreen,
+                          )))
                       : ListView.builder(
                           padding: const EdgeInsets.fromLTRB(paddingMedium,
                               paddingXXSmall, paddingMedium, paddingXXSmall),
@@ -40,8 +45,13 @@ class LocationView extends GetView<LocationController> {
                             int subtitleText =
                                 controller.locations[index].count ?? 0;
                             String images = controller.listImage[index];
-                            return cardLocation(titleText,
-                                subtitleText.toString(), images, () {});
+                            return cardLocation(
+                                titleText, subtitleText.toString(), images, () {
+                              Get.toNamed("/detail-lokasi", arguments: {
+                                "index": index,
+                                "title": controller.locations[index].label
+                              });
+                            });
                           }))
                 ],
               ),

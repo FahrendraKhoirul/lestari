@@ -25,9 +25,9 @@ Container cardKerjasama(String number, date, work, desc, Function() fun) {
           ],
         ),
         const SizedBox(height: paddingSmall),
-        Text(date, style: customTextStyle(size: 14, weight: FontWeight.w600)),
+        Text(date, style: customTextStyle(size: 16, weight: FontWeight.w600)),
         const SizedBox(height: paddingXXSmall),
-        Text(work, style: customTextStyle(size: 14, weight: FontWeight.w600)),
+        Text(work, style: customTextStyle(size: 16, weight: FontWeight.w600)),
         const SizedBox(height: paddingSmall),
         Text(
           desc,

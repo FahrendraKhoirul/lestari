@@ -21,8 +21,6 @@ class LocationController extends GetxController {
     fetchData();
   }
 
-
-
   Future<void> fetchData() async {
     try {
       isLoading.value = true;

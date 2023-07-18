@@ -33,9 +33,6 @@ class PanduanView extends GetView<PanduanController> {
                         controller.searchText.value = value.toLowerCase();
                         controller.sortBySearch();
                       }),
-                      const SizedBox(
-                        height: paddingSmall,
-                      ),
                       Obx(() => controller.isLoading.value
                           ? SizedBox(
                               height: Get.height * 0.5,

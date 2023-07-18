@@ -8,6 +8,7 @@ Widget customHeader({
   String title = "title",
   String subtitle = "subtitle",
   double bottomPadding = paddingLarge,
+  double bottomTextPadding = 0,
   double imageWidth = 110,
   required String image,
   required bool backButton,
@@ -32,12 +33,10 @@ Widget customHeader({
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        // SizedBox(
-        //   height: paddingLarge,
-        // ),
         if (backButton)
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 0, paddingSmall),
+            padding:
+                const EdgeInsets.fromLTRB(0, paddingMedium, 0, paddingSmall),
             child: InkWell(
               child: const Icon(Icons.arrow_back),
               onTap: () {
@@ -65,9 +64,12 @@ Widget customHeader({
                   const SizedBox(
                     height: paddingSmall,
                   ),
-                  Text(
-                    subtitle,
-                    style: paragraph,
+                  Padding(
+                    padding: EdgeInsets.only(bottom: bottomTextPadding),
+                    child: Text(
+                      subtitle,
+                      style: paragraph,
+                    ),
                   ),
                 ],
               ),

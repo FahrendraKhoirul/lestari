@@ -20,7 +20,11 @@ class DetailKerjasamaView extends GetView<DetailKerjasamaController> {
         children: [
           appBar(context, "Detail Kerjasama"),
           roundedCardDetail("Nomor ", datas.number as String, datas.date,
-              datas.description, () {})
+              datas.description, () {
+                int id = datas.document?[0].id ?? 0;
+                String filename = datas.document?[0].fileName ?? "";
+                controller.launchPDF(id, filename);
+              })
         ],
       ),
     );

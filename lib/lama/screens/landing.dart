@@ -4,7 +4,6 @@ import 'package:lestari/constants.dart';
 import '../../app/global_widgets/custom_buttons.dart';
 import '../../app/global_widgets/landing_widgets.dart';
 
-
 class Landing extends StatelessWidget {
   const Landing({super.key});
 
