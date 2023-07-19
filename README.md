@@ -1,4 +1,4 @@
-![WhatsApp Image 2023-07-18 at 15 50 36](https://github.com/FahrendraKhoirul/lestari/assets/103916710/9fea303f-4a58-4fd9-a115-a8b1b037d4c9)# Lestari App
+# Lestari App
 
 Lestari is an application developed by Kominfotik Nusa Tenggara Barat with the aim of supporting the operational activities of waste management in West Nusa Tenggara Province. The app is built using the Flutter framework.
 
