@@ -20,7 +20,6 @@ Lestari is an application developed by Kominfotik Nusa Tenggara Barat with the a
 
 ## Preview
 <div style="display: flex;">
-  <img src="https://github.com/FahrendraKhoirul/lestari/assets/103916710/0744be00-9a77-45ac-a831-d4d738970507" width="200" height="400" style="margin-right: 20px;">
   <img src="https://github.com/FahrendraKhoirul/lestari/assets/103916710/c0b11a34-6dba-4bd4-8844-bb0151d3b25e" width="200" height="400" style="margin-right: 20px;">
   <img src="https://github.com/FahrendraKhoirul/lestari/assets/103916710/1cc9e353-0a8a-4e0d-bb8b-fa42d7fe0d0d" width="200" height="400" style="margin-right: 20px;">
   <img src="https://github.com/FahrendraKhoirul/lestari/assets/103916710/d74e33dc-c599-4c16-8182-1df68670467f" width="200" height="400" style="margin-right: 20px;">
